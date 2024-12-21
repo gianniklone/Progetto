@@ -1,0 +1,37 @@
+.sezione_skills {
+    padding: 0 50px;
+    margin-bottom: 100px;
+    h2 {
+        text-align: center;
+        font-size: 35px;
+    }
+    .testo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .celle {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .cella1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 200px;
+            padding: 20px 20px;
+            margin: 10px;
+            border: 2px solid #d3d3d3;
+            border-radius: 7px;
+            img {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+                border-radius: 2px;
+            }
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+}

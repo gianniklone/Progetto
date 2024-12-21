@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Oswald:wght@300;400;500&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Arimo", sans-serif;
+  background-color: #eeeff1;
+  margin: 0 auto;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+a {
+  color: #1a1c20;
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 0 20px;
+  }
+  .nav_destra a:last-child {
+    color: #1a1c20;
+    background-color: transparent;
+    padding: 0;
+  }
+  .nav_destra a {
+    font-size: 22px;
+  }
+  .nav_destra a span {
+    display: none;
+  }
+  .sezione_centrale {
+    padding: 0 20px;
+  }
+  .sezione_centrale .testo h2 {
+    font-size: 30px;
+  }
+  .sezione_skills {
+    padding: 0 20px;
+  }
+  .sezione_skills .celle .cella1 span {
+    font-size: 16px;
+  }
+  .sezione_contatto {
+    padding: 10px 30px;
+  }
+  .principale-progetti {
+    text-align: center;
+  }
+  .principale-progetti .immagine-principale {
+    width: 350px;
+    height: 400px;
+  }
+}
+@media (max-width: 850px) {
+  .sezione_centrale .testo h2 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 740px) {
+  .sezione_centrale {
+    flex-direction: column-reverse;
+  }
+  .sezione_centrale .foto_principale img {
+    width: 300px;
+  }
+  .sezione_contatto {
+    flex-direction: column;
+  }
+}
+.sezione_centrale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 50px 0;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+.sezione_centrale .testo {
+  flex: 5;
+}
+.sezione_centrale .testo .links {
+  margin-top: 20px;
+}
+.sezione_centrale .testo .links .btn-principale {
+  background-color: #eeeff1;
+  color: #1a1c20;
+  padding: 0.5em 1em;
+  border: 2px solid #1a1c20;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 300ms ease-in-out;
+}
+.sezione_centrale .testo .links .btn-principale::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #1a1c20;
+  transition: 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.sezione_centrale .testo .links .btn-principale:hover::before,
+.sezione_centrale .testo .links .btn-principale:focus::before {
+  transform: scaleX(1);
+}
+.sezione_centrale .testo .links .btn-principale:hover,
+.sezione_centrale .testo .links .btn-principale:focus {
+  color: white;
+}
+.sezione_centrale .foto_principale {
+  flex: 2;
+  display: flex;
+  justify-content: right;
+}
+.sezione_centrale .foto_principale img {
+  border-radius: 50%;
+  width: 350px;
+}
+.sezione_centrale h2 {
+  font-size: 50px;
+}
+
+.sezione_skills {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+.sezione_skills h2 {
+  text-align: center;
+  font-size: 35px;
+}
+.sezione_skills .testo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sezione_skills .celle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.sezione_skills .celle .cella1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  padding: 20px 20px;
+  margin: 10px;
+  border: 2px solid #d3d3d3;
+  border-radius: 7px;
+}
+.sezione_skills .celle .cella1 img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 2px;
+}
+.sezione_skills .celle .cella1 span {
+  font-size: 18px;
+}
+
+.sezione_contatto {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+.sezione_contatto h2 {
+  font-size: 50px;
+}
+.sezione_contatto .group {
+  display: flex;
+  gap: 50px;
+}
+.sezione_contatto .group .testo {
+  flex: 3;
+  margin-top: 20px;
+}
+.sezione_contatto .group form {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.sezione_contatto .group form input, .sezione_contatto .group form textarea {
+  font-family: "Arimo", sans-serif;
+  border: 2px solid #1a1c20;
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  resize: none;
+}
+.sezione_contatto .group form button {
+  font-size: 16px;
+  font-family: "Arimo", sans-serif;
+  color: #fff;
+  background-color: #1a1c20;
+  border: none;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.sezione_contatto .group form button:hover {
+  filter: brightness(0.9);
+}
+
+.principale-progetti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.titolo-work {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 800;
+}
+
+.immagine-principale {
+  width: 700px;
+  height: 700px;
+}
+
+.btn {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.torna-indietro {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 80px;
+  width: 100%;
+  background-color: black;
+}
+.nav_sinistra a {
+  color: #eeeff1;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease 0s;
+}
+.nav_sinistra a:hover {
+  color: rgb(103, 103, 224);
+}
+.nav_destra a {
+  color: #eeeff1;
+  margin: 0 8px;
+  transition: all 0.2s ease 0s;
+}
+.nav_destra a:last-child {
+  color: #1a1c20;
+  background-color: #eeeff1;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+.nav_destra a:last-child span {
+  margin-left: 5px;
+}
+.nav_destra a:hover {
+  color: rgb(103, 103, 224);
+}/*# sourceMappingURL=main.css.map */

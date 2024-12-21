@@ -1,0 +1,28 @@
+@import 'function.scss';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arimo', sans-serif;
+    background-color: $colore-sfondo;
+    margin: 0 auto;
+
+}
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+a {
+    color: $colore-link;
+    text-decoration: none;
+}
+

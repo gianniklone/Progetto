@@ -1,0 +1,26 @@
+.principale-progetti {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.titolo-work {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 800;
+}
+
+.immagine-principale {
+    width: 700px;
+    height: 700px;
+}
+.btn {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.torna-indietro {
+    text-decoration: none;
+    color: #ffff;
+}

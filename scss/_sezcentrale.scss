@@ -1,0 +1,62 @@
+.sezione_centrale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+    .testo {
+        flex: 5;
+        .links {
+            margin-top: 20px;
+            .btn-principale{
+                background-color: $colore-sfondo;
+                color: $colore-link;               
+                padding: .5em 1em;
+                border: 2px solid $colore-link;
+                outline: none;
+                position: relative;
+                cursor: pointer;
+                z-index: 1;
+                transition: color 300ms ease-in-out;
+            }
+            .btn-principale::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                background-color: $colore-link;
+
+                transition: 300ms ease-in-out;
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+            .btn-principale:hover::before,
+            .btn-principale:focus::before {
+                transform: scaleX(1);
+            }
+            .btn-principale:hover,
+            .btn-principale:focus {
+                color: white;
+            }
+        } 
+    }
+    .foto_principale {
+        flex: 2;
+        display: flex;
+        justify-content: right;
+        img {
+            border-radius: 50%;
+            width: 350px;
+        }
+    }
+    h2 {
+        font-size: 50px;
+    }
+
+}
+

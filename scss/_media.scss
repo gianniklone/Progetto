@@ -1,0 +1,57 @@
+@media (max-width: 480px) {
+    .nav  {
+        padding: 0 20px;
+        &_destra a:last-child{
+            color: $colore-testo;
+            background-color: transparent;
+            padding: 0;
+        }
+        &_destra a {
+            font-size: 22px;
+        }
+        &_destra a span{
+            display: none;
+        }
+    }
+    .sezione_centrale {
+        padding: 0 20px;
+        .testo h2{
+            font-size: 30px;
+
+        }
+    }
+    .sezione_skills{
+        padding: 0 20px;
+        .celle .cella1 span {
+            font-size: 16px;
+        }
+    }
+    .sezione_contatto{
+        padding: 10px 30px;
+    }
+    .principale-progetti{
+        text-align: center;
+        .immagine-principale {
+            width: 350px;
+            height: 400px;
+        }
+    }
+
+}
+
+@media (max-width: 850px) {
+    .sezione_centrale .testo h2 {
+        font-size: 35px;
+    }
+}
+@media (max-width: 740px) {
+    .sezione_centrale {
+        flex-direction: column-reverse;
+        .foto_principale img {
+            width: 300px;
+        }
+    } 
+    .sezione_contatto {
+        flex-direction: column;
+    }
+}
